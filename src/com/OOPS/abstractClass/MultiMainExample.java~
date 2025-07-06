@@ -1,0 +1,17 @@
+package com.OOPS.abstractClass;
+
+public class MultiMainExample {
+    
+    public static void main(String[] args) {
+    main();
+    main("Madhusudan");
+    }
+
+    public static void main(){
+        System.out.println("main with no argument");
+    }
+
+    public static void main(String name) {
+        System.out.println("main with String argument/n" + "your name is " + "name" );
+    }
+}

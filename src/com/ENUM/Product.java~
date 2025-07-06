@@ -1,0 +1,21 @@
+package com.ENUM;
+
+public enum Product {
+
+
+    ELECTRONICS(0.10),
+    CLOTHING(0.20),
+    KITCHEN(0.05);
+
+    private final double discountRate;
+
+    Product(double discountRate) {
+        this.discountRate = discountRate;
+    }
+
+    public double getDiscountRate() {
+        return discountRate;
+    }
+    
+
+}

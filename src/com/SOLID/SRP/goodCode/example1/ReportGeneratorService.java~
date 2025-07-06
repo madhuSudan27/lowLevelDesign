@@ -1,0 +1,6 @@
+package com.SOLID.SRP.goodCode;
+
+interface ReportGeneratorService {
+
+    String generateReport();
+}

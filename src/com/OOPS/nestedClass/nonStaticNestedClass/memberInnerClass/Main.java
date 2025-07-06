@@ -1,0 +1,25 @@
+package com.OOPS.nestedClass.nonStaticNestedClass.memberInnerClass;
+
+import java.sql.SQLOutput;
+
+public class Main {
+    public static void main(String[] args) {
+        OuterClass outerClassObject = new OuterClass();
+        OuterClass.InnerClass innerClassObject = outerClassObject.new InnerClass();
+        innerClassObject.print();
+
+
+        System.out.println(OuterClass.InnerClass.innerClassStaticVariable);
+
+        Object obj = outerClassObject.getObjectOfPrivateInnerClass();
+
+        System.out.println(obj.getClass());
+        outerClassObject.getObjectOfPrivateInnerClass();
+
+//        OuterClass.PrivateInnerClass privateInnerClassObject = (OuterClass.PrivateInnerClass)obj;
+
+//        outerClassObject.printPrivateNestedClassPrintMethod();
+
+
+    }
+}
