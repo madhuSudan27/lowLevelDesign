@@ -2,6 +2,20 @@ Open close Principle
 
 Open Close Principle (OCP) states that software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
 
+*Problem Statement*
+- You are building a notification module for a large-scale banking/fintech application. The app needs to send alerts to users via multiple channels such as:
+
+📧 Email
+
+📱 SMS
+
+📲 Push Notification
+
+💬 WhatsApp
+
+🔔 Slack (later)
+
+Today, your system only supports Email and SMS. But later you’ll have to support more channels — without modifying the existing code.
 
 Liskov substitution principle
 
