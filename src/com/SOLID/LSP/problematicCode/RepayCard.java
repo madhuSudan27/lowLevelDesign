@@ -21,8 +21,12 @@ public class RepayCard extends CreditCard {
         System.out.println("RepayCard mandate payment");
     }
 
+
+
+
     @Override
-    public void UpiPayment() {
+    public void UpiPayment()  throws NoSuchMethodException{
         System.out.println("RepayCard Upi payment");
+        throw new NoSuchMethodException("does not supports upi payment");
     }
 }

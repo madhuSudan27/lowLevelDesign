@@ -9,4 +9,3 @@ Liskov substitution principle
 - Subclasses should be able to substitute for their base classes.
 - The base class should be a generalization of the subclass.
 - Child class should not need special treatment. 
-- 

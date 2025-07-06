@@ -20,17 +20,20 @@ public class VisaCard extends CreditCard{
 
 
 
-
     /*
     Visa card does not support UPI payment but still we have to implement
     */
     @Override
-    public void UpiPayment() throws NoSuchMethodException {
+    public void upiPayment() throws NoSuchMethodException {
 
         System.out.println("Visa does not supports upi payment");
-        throw new NoSuchMethodException("Visa does not supports upi payment");
+        throw new NoSuchMethodException("does not supports upi payment");
+
     }
 
-
+    @Override
+    public void UpiPayment() {
+        
+    }
 
 }

@@ -27,6 +27,11 @@ public abstract class CreditCard {
 
     public abstract void swipeAndPay();
     public abstract void  mandatePayment();
-    public abstract void UpiPayment();
 
+    public abstract void UpiPayment() throws NoSuchMethodException;
+
+
+    // now later on we need to add one more method
+    // international Payment
+    // but our rupay card does not support international payment
 }
