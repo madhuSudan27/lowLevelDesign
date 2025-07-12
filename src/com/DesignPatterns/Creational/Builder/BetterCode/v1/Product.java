@@ -1,29 +1,22 @@
-package com.DesignPatterns.Creational.Builder.ProblematicCode;
+package com.DesignPatterns.Creational.Builder.BetterCode.v1;
+
+import java.util.List;
 
 public class Product {
-
     private String name;
     private double price;
     private String description;
     private String category;
     private String brand;
     private String color;
+    private String createdAt;
+    private String updatedAt;
+    private List<String> images;
 
-    Product() {
+    // default constructor
+    Product() {}
 
-    }
 
-    // constructor is too big
-    // hard to maintain order of parameters
-
-    public Product(String name, double price, String description, String category, String brand, String color) {
-        this.name = name;
-        this.price = price;
-        this.description = description;
-        this.category = category;
-        this.brand = brand;
-        this.color = color;
-    }
 
     public String getName() {
         return name;
@@ -73,4 +66,27 @@ public class Product {
         this.color = color;
     }
 
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public List<String> getImages() {
+        return images;
+    }
+
+    public void setImages(List<String> images) {
+        this.images = images;
+    }
 }
