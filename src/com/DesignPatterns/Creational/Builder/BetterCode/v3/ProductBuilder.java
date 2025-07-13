@@ -1,5 +1,6 @@
 package com.DesignPatterns.Creational.Builder.BetterCode.v3;
 
+import javax.management.RuntimeMBeanException;
 import java.util.List;
 
 public class ProductBuilder {
@@ -18,6 +19,8 @@ public class ProductBuilder {
     }
 
     public void setName(String name) {
+        if(name == null) throw new RuntimeException("name cannot be null");
+        if(name.length() <= 2) throw  new RuntimeException("name should be at least 3 characters long");
         this.name = name;
     }
 

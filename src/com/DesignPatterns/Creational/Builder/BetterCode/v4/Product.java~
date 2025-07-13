@@ -1,0 +1,37 @@
+package com.DesignPatterns.Creational.Builder.BetterCode.v4;
+
+import java.util.List;
+
+public class Product {
+    private String name;
+    private double price;
+    private String description;
+    private String category;
+    private String brand;
+    private String color;
+    private String createdAt;
+    private String updatedAt;
+    private List<String> images;
+
+
+    private  Product(Builder builder){
+
+    }
+    public static  class Builder{
+        private String name;
+        private double price;
+        private String description;
+        private String category;
+        private String brand;
+        private String color;
+        private String createdAt;
+        private String updatedAt;
+        private List<String> images;
+
+
+        public Builder setName(String name){
+            this.name = name;
+            return this;
+        }
+    }
+}
