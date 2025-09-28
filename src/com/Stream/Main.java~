@@ -1,0 +1,20 @@
+package com.Stream;
+
+import com.Stream.practiceProblem.Employee;
+
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
+
+
+    public  int countEmployeeWhoseSalaryIsMoreThan(int salary, List<Employee> employees) {
+
+        /*
+            count() -> returns long
+         */
+        return  (int)employees.stream().filter(e -> e.getSalary() > salary).count();
+    }
+}
