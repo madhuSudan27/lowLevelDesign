@@ -1,0 +1,14 @@
+package com.Interface.FunctionalInterface.typesOfFunctionalInterface.Predicate;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Predicate<Integer> canVote = (Integer age) ->{
+
+            return age >= 18;
+        };
+
+        System.out.println(canVote.check(1));
+
+    }
+}

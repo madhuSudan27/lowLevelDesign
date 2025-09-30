@@ -1,0 +1,7 @@
+package com.Interface.AnonymousClass;
+
+public class Main {
+    public static void main(String[] args) {
+        
+    }
+}
