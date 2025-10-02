@@ -1,0 +1,2 @@
+package com.MultiThreading.MonitorLock.ProducerConsumerProblem;public class SharedResource {
+}
