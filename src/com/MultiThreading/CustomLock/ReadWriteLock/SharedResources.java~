@@ -1,0 +1,43 @@
+package com.MultiThreading.CustomLock.ReadWriteLock;
+
+import java.util.concurrent.locks.ReadWriteLock;
+
+public class SharedResources {
+
+    boolean isAvailable = false;
+
+    public void consume(ReadWriteLock lock){
+        try{
+            lock.readLock().lock();
+            System.out.println("Read Lock acquired by "+ Thread.currentThread().getName());
+            isAvailable = false;
+            Thread.sleep(6000);
+        }
+        catch (Exception e){
+
+        }
+
+        finally {
+            lock.readLock().unlock();
+            System.out.println("Read lock released by "+ Thread.currentThread().getName());
+        }
+    }
+
+    public void produce(ReadWriteLock lock){
+
+        try{
+            lock.writeLock().lock();
+            System.out.println("Write lock acquired by "+ Thread.currentThread().getName());
+            isAvailable = true;
+
+            try {
+                Thread.sleep(3000);
+            }
+            catch (Exception e){
+        }
+
+
+    }
+
+
+}

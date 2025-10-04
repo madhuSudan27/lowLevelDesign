@@ -1,0 +1,22 @@
+package com.MultiThreading.CustomLock.ReadWriteLock;
+
+import com.MultiThreading.Basic.JoinThreadDemo.SharedResource;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+public class Main {
+    public static void main(String[] args) {
+
+        SharedResource resource1 = new SharedResource();
+        SharedResource resource2 = new SharedResource();
+        SharedResource resource3 = new SharedResource();
+
+        ReadWriteLock lock = new ReentrantReadWriteLock();
+
+        Thread thread1 = new Thread(
+                () -> resource1.produce(lock),
+                "Producer-1");
+    }
+}

@@ -1,0 +1,20 @@
+package com.MultiThreading.CustomLock.ReentrantLock;
+
+public class Main {
+    public static void main(String[] args) {
+
+        SharedResources resource1 = new SharedResources();
+        SharedResources resource2 = new SharedResources();
+
+        Thread thread1 = new Thread(()->{
+            resource1.produce();
+        });
+
+        Thread thread2 = new Thread(()->{
+            resource2.produce();
+        });
+
+        thread1.start();
+        thread2.start();
+    }
+}

@@ -1,0 +1,2 @@
+package com.MultiThreading.CustomLock.ReadWriteLock;public class SharedResource {
+}

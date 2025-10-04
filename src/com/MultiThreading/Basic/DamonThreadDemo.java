@@ -1,0 +1,22 @@
+package com.MultiThreading.Basic;
+
+import com.MultiThreading.Basic.JoinThreadDemo.SharedResource;
+
+public class DamonThreadDemo {
+    public static void main(String[] args) {
+
+        System.out.println("Main thread execution started");
+
+        SharedResource sharedResource = new SharedResource();
+        Thread thread1 = new Thread(sharedResource::produce, "Damon-Thread-1");
+        thread1.setDaemon(true);
+        thread1.start();
+        try{
+            Thread.sleep(3000);
+        }
+        catch (Exception e){
+
+        }
+        System.out.println("Main thread execution ended");
+    }
+}
