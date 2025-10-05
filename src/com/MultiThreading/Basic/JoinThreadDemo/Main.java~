@@ -27,7 +27,13 @@ public class Main {
 
         // thread 2 will only start after thread 1 is completed because of join
         thread2.start();
+        try{
 
+        thread2.join();
+        }
+        catch (Exception e){
+            
+        }
 
         System.out.println("Main thread execution ended");
     }

@@ -1,0 +1,30 @@
+package com.MultiThreading.CustomLock.SemaphoreLock;
+
+import java.util.concurrent.Semaphore;
+
+// This program is to simulate a parking lot
+public class ParkingLot {
+    
+    private Semaphore semaphore;
+
+    public ParkingLot(int numberOfSlots) {
+        this.semaphore = new Semaphore(numberOfSlots);
+    }
+
+    public void parkCar(String carName) {
+
+        try{
+            System.out.println(carName + " is waiting for a slot");
+            semaphore.acquire();
+
+            System.out.println( carName + " is parked in a slot");
+//            Takes 5 sec to park
+            Thread.sleep(5000);
+
+            System.out.println(carName + " is leaving the slot");
+            semaphore.release();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
