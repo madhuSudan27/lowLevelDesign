@@ -1,0 +1,2 @@
+package com.Exception.BankManagementSystem.Exceptions;public class InsufficientBalanccException {
+}
