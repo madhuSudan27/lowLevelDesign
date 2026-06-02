@@ -16,7 +16,7 @@ public enum ProductEnumOverride {
     KITCHEN {
         @Override
         public double getDiscount(double price) {
-            return price * 0.95; // 5% off
+            return price * 0.95;
         }
     };
 

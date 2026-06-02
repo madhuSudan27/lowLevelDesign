@@ -6,7 +6,9 @@ public class Main {
         Product iPhone = Product.getBuilder()
                 .setName("iPhone 12 Pro Max")
                 .setCategory("Electronics")
-                .setPrice(0)
+                .setPrice(12)
                 .build();
+
+        System.out.println(iPhone);
     }
 }

@@ -15,7 +15,6 @@ public class Product {
 
 
     private Product(Builder builder){
-
         this.name = builder.getName();
         this.price = builder.getPrice();
         this.description = builder.getDescription();
@@ -134,5 +133,20 @@ public class Product {
         public Product build(){
             return new Product(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", brand='" + brand + '\'' +
+                ", color='" + color + '\'' +
+                ", createdAt='" + createdAt + '\'' +
+                ", updatedAt='" + updatedAt + '\'' +
+                ", images=" + images +
+                '}';
     }
 }

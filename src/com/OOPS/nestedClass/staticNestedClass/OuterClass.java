@@ -23,7 +23,7 @@ public class OuterClass {
             System.out.println("Executing the method of private nested class");
             System.out.println(OuterClass.staticVariable);
         }
-        // how i can create the object of private nested class
+        // how  can  create the object of private nested class
     }
 
     public void printPrivateNestedClassPrintMethod() {
